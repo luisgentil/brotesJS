@@ -1,0 +1,52 @@
+<!doctype html> 
+<html> 
+<head>
+<meta charset="utf-8"/> 
+<link rel="stylesheet" type="text/css" href="css/estilo.css" />
+<script type="text/javascript" src="js/enlaces.js" ></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/brotes.js" ></script>
+
+</head>
+
+<body>
+
+<div id="titulo" >
+<h1>Orar con Brotes de Olivo</h1></div>
+<div id="comentario" style="bold">Cada día, 3 canciones distintas para orar con la música de Brotes de Olivo.
+<p>Entre canción y canción, un rato de pausa para reflexionar. ¡Que te aproveche!</p>
+<p></p>
+</div>
+
+<div id="waitTime" >Tiempo de pausa entre canciones: 1 minuto.
+<p></p>
+</div>
+
+<div id="song" >
+<h3>Este es el título de la canción que está sonando.</h3>
+</div>
+
+<div id="album" >Este es el disco en el que podrás encontrarla.
+<p></p>
+</div>
+
+
+<div id="dpLink">Gracias a <a href="http://www.brotesdeolivo.es/">Brotes de Olivo</a> por compartir su música.
+<p></p>
+</div>
+
+
+<div id="avisos">Pulsa el botón para comenzar.</div>
+
+<div id="botonera">
+<button id="boton" onclick="comenzar()">comenzar</button>
+
+<p></p>
+
+<audio  id="sonido" width="" height="" 
+        src="https://dl.dropbox.com/s/ypqmvs7fdzqqsc0/ambiente.mp3" controls
+         preload="" autoplay>
+<p></p>
+</div>
+
+</body>
