@@ -1,14 +1,8 @@
 # Brotes app
 
-## Usage
+repositorio de la app.
+versión web en 
+luisgentil.neocities.org
 
-### PhoneGap CLI
-
-    $ From phonegap create my-app 
-
-### Desktop
-
-In your browser, open the file:
-
-    /www/index.html
+en elaboración.
 
