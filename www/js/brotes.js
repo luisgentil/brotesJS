@@ -88,7 +88,7 @@ cargar = function() {
 
 // intenta ejecutar desde SD-card, y si no va, desde internet.
 // si no puede, muestra un error --> PENDIENTE
-
+/*
 try {
   if(fs.accessSync(fichero)) {
     // existe: nada que hacer
@@ -100,7 +100,7 @@ try {
     document.getElementById("avisos").innerText = "NO existe" + fichero + "-- " + links[click_numero]; // por si quieres verlo en pantalla
     fichero = links[click_numero]; 
 }
-
+*/
 // detiene el sonido si lo hay
     document.getElementById("sonido").pause();
 // carga la canción que debe comenzar, desde la variable fichero
