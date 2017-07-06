@@ -97,7 +97,7 @@ try {
     
 } catch (e) {
   // no existe
-  // document.getElementById("titulo").innerHTML = "NO existe" + fichero + "-- " + links[click_numero]; // por si quieres verlo en pantalla
+    document.getElementById("avisos").innerText = "NO existe" + fichero + "-- " + links[click_numero]; // por si quieres verlo en pantalla
     fichero = links[click_numero]; 
 }
 
