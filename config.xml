@@ -7,6 +7,7 @@
     <author email="cursofactor@gmail.com" href="http://luisgentil.neocities.org">
         Luis Gentil
     </author>
+    <icon src="icon.png" />
     <content src="index.html" />
     <access origin="*" />
     <plugin name="cordova-plugin-whitelist" version="1"/>
