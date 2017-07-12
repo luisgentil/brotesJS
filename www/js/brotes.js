@@ -80,35 +80,40 @@ cargar = function() {
 	document.getElementById("avisos").innerHTML = estado[click_numero];    // fase dentro del ciclo de canciones
 
 // prueba para archivos locales
+	var songLink = links[click_numero].split("\/");
+	var fichero = "file:///storage/sdcard1/music/BrotesDeOlivo/" + songLink[songLink.length-1] ;
 
+
+// ahora, hay que elegir entre reproducción local o desde internet, por defecto local,
+// también, una página en la web para la descarga de la app, así como instrucciones para
+// descargar las canciones e instalarlas en el movil.
 // ahora, comienza a sonar la música de la canción
 // genera un link al almacenamiento tarjeta SD
-	var songLink = links[click_numero].split("\/");
-	var fichero = "file:///storage/sdcard1/music/BrotesDeOlivo/" + songLink[songLink.length-1] ; 
 
 // intenta ejecutar desde SD-card, y si no va, desde internet.
 // si no puede, muestra un error --> PENDIENTE
 /*
-try {
-  if(fs.accessSync(fichero)) {
+  try {
+    if(fs.accessSync(fichero)) { // ESTO DA PROBLEMAS, LO DE fs GENERA UN ERROR ReferenceError: fs is not defined
     // existe: nada que hacer
-//    document.getElementById("titulo").innerHTML = "existe" + fichero;
-    }
-    
-} catch (e) {
+    //    document.getElementById("titulo").innerHTML = "existe" + fichero;
+
+      }
+  } catch (e) {
   // no existe
-    document.getElementById("avisos").innerText = "NO existe" + fichero + "-- " + links[click_numero]; // por si quieres verlo en pantalla
+   	document.getElementById("titulo").innerText = e; // por si quieres verlo en pantalla
     fichero = links[click_numero]; 
-}
-*/
+  }*/
+//	document.getElementById("avisos").innerText = fichero; //songLink[songLink.length-1];
 // detiene el sonido si lo hay
     document.getElementById("sonido").pause();
-// carga la canción que debe comenzar, desde la variable fichero
+// document.getElementById("avisos").innerText = fichero; // control en desarrollo
+// carga la canción que debe comenzar, desde la var fichero
     reproductorMusica.src = fichero; //links[click_numero]; 
 // aumenta el contador para la siguiente canción
 	click_numero +=1;
 // que suene!
-	document.getElementById("sonido").play();
+	  document.getElementById("sonido").play();
 
 };
 
@@ -119,10 +124,7 @@ try {
 // y el PMV es: versión que reproduzca los ficheros en Dropbox. --> terminado
 //				- que reproduzca la música                                ok
 //				- que sea presentable visualmente                         ok
-//				- subir al Git						  ok!
-// y lo siguiente es: versión Phonegap del PMV.						  ok
-// y lo siguiente es: versión Phonegap que reproduzca de la tarjeta SD.			  ok!
-//
-// promocionar y buscar testers
-// mejorar CSS
+//				- subir al Git
+// y lo siguiente es: versión Phonegap del PMV.							  ok
+// y lo siguiente es: versión Phonegap que reproduzca de la tarjeta SD.
 
