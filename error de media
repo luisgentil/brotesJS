@@ -1,0 +1,14 @@
+desde:
+https://stackoverflow.com/questions/21638741/html5-audio-not-playing-in-phonegap-app-possible-to-use-media
+
+acaba hablando de esto:
+
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+también hay que leer esto:
+http://docs.phonegap.com/en/2.0.0/cordova_media_media.md.html
+
+y esto:
+https://github.com/phonegap/phonegap-app-desktop/issues/335
