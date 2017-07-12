@@ -104,7 +104,7 @@ cargar = function() {
    	document.getElementById("titulo").innerText = e; // por si quieres verlo en pantalla
     fichero = links[click_numero]; 
   }*/
-//	document.getElementById("avisos").innerText = fichero; //songLink[songLink.length-1];
+    document.getElementById("avisos").innerText = fichero; //songLink[songLink.length-1];
 // detiene el sonido si lo hay
     document.getElementById("sonido").pause();
 // document.getElementById("avisos").innerText = fichero; // control en desarrollo
