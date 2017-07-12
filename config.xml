@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.Brotes" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.phonegap.Brotes" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Brotes</name>
     <description>
         3 canciones distintas cada día para orar con Brotes de Olivo.
@@ -7,8 +7,9 @@
     <author email="cursofactor@gmail.com" href="http://luisgentil.neocities.org">
         Luis Gentil
     </author>
-    <icon src="icon.png" />
+
     <content src="index.html" />
     <access origin="*" />
     <plugin name="cordova-plugin-whitelist" version="1"/>
+    <icon src="icon.png" />
 </widget>
