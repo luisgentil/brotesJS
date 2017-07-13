@@ -13,7 +13,7 @@
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
     <plugin name="cordova-plugin-file" source="npm" spec="~4.1.1" />
     <platform name="android">    
-     <icon src="www/icon.png" density="ldpi" />
+     <icon src="icon.png" density="ldpi" />
     </platform>
     
     <content src="index.html" />
