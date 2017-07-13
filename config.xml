@@ -1,18 +1,20 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.phonegap.Brotes" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Brotes</name>
+    
     <description>
         3 canciones distintas cada día para orar con Brotes de Olivo.
     </description>
+    
     <author email="cursofactor@gmail.com" href="http://luisgentil.neocities.org">
         Luis Gentil
     </author>
     
-    <icon src="www/icon.png" density="ldpi" />
+    <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
     
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <platform name="android">    
+     <icon src="www/icon.png" density="ldpi" />
+    </platform>
     
     <content src="index.html" />
     <access origin="*" />
