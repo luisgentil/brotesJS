@@ -12,3 +12,7 @@ http://docs.phonegap.com/en/2.0.0/cordova_media_media.md.html
 
 y esto:
 https://github.com/phonegap/phonegap-app-desktop/issues/335
+
+
+Y para el icon, probar:
+<icon src="logo.png" gap:platform="android" gap:density="ldpi" />
