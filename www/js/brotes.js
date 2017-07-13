@@ -96,28 +96,15 @@ cargar = function() {
 	var songLink = links[click_numero].split("\/");
 	var fichero = "file:///storage/sdcard1/music/BrotesDeOlivo/" + songLink[songLink.length-1] ;
 
+// ahora, hay que elegir entre reproducción local o desde internet, por defecto internet,
 
-// ahora, hay que elegir entre reproducción local o desde internet, por defecto local,
-// también, una página en la web para la descarga de la app, así como instrucciones para
-// descargar las canciones e instalarlas en el movil.
-// ahora, comienza a sonar la música de la canción
-// genera un link al almacenamiento tarjeta SD
+// comprueba la variable global "elegido"
+// si es internet, hay que cambiar el valor de "fichero"
+	if (elegido === "internet") { 
+ 	    fichero = links[click_numero]; 
+    } 
+// si es "SD" no hay que hacer nada
 
-// intenta ejecutar desde SD-card, y si no va, desde internet.
-// si no puede, muestra un error --> PENDIENTE
-/*
-  try {
-    if(fs.accessSync(fichero)) { // ESTO DA PROBLEMAS, LO DE fs GENERA UN ERROR ReferenceError: fs is not defined
-    // existe: nada que hacer
-    //    document.getElementById("titulo").innerHTML = "existe" + fichero;
-
-      }
-  } catch (e) {
-  // no existe
-   	document.getElementById("titulo").innerText = e; // por si quieres verlo en pantalla
-    fichero = links[click_numero]; 
-  }*/
-//   document.getElementById("avisos").innerText = fichero; //songLink[songLink.length-1];
 // detiene el sonido si lo hay
     document.getElementById("sonido").pause();
 // document.getElementById("avisos").innerText = fichero; // control en desarrollo
@@ -126,18 +113,19 @@ cargar = function() {
 // aumenta el contador para la siguiente canción
 	click_numero +=1;
 // que suene!
-	  document.getElementById("sonido").play();
-
+   document.getElementById("sonido").play();
 };
 
 };
-
 
 // vamos a dejar la versión de escritorio con música local, no tiene sentido seguir con esto cuando no está el PMV.
 // y el PMV es: versión que reproduzca los ficheros en Dropbox. --> terminado
 //				- que reproduzca la música                                ok
 //				- que sea presentable visualmente                         ok
-//				- subir al Git
-// y lo siguiente es: versión Phonegap del PMV.							  ok
-// y lo siguiente es: versión Phonegap que reproduzca de la tarjeta SD.
-
+//				- subir al Git						  ok
+// y lo siguiente es: versión Phonegap del PMV.						  ok
+// y lo siguiente es: versión Phonegap que reproduzca de la tarjeta SD.			  ok
+// y lo siguiente es: que se pueda elegir entre internet y SD				elaborando
+// next, en la web código BIDI la descarga de la app, 					pte
+// next, instrucciones para descargar las canciones e instalarlas en el movil.		pte
+// next, mejorar el diseño CSS								pte
