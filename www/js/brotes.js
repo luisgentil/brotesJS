@@ -6,15 +6,28 @@ var control_boton = 0;
 var click_numero = 0;
 var fecha = new Date();
 var estado = ["sonando_1", "pausa_1", "sonando_2", "pausa_2", "sonando_3", "final"];
+var elegido = document.getElementById("file_source").innerText;
+
+// función para el botón "internet" (elegir origen de mp3)
+elegir = function() {
+if (elegido === "internet") {
+	elegido ="SD";
+}
+else {
+	elegido = "internet";
+	 }
+document.getElementById("file_source").innerText = elegido;
+};
 
 // función para el botón "comenzar"
 comenzar = function() { 
+document.getElementById("botonera").style.visibility = "hidden";
 if (control_boton === 0) { // es la primera vez que pulsa el botón
 	control_boton = 1; // 
 	cargar();
 }
 };
-
+	
 var reproductorMusica = document.getElementById("sonido");
 //eventos: pausa, o final
 // qué pasa si la música se pausa
