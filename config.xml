@@ -8,6 +8,10 @@
         Luis Gentil
     </author>
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    
     <content src="index.html" />
     <access origin="*" />
     <plugin name="cordova-plugin-whitelist" version="1"/>
