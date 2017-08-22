@@ -125,7 +125,7 @@ cargar = function() {
 //				- subir al Git						  ok
 // y lo siguiente es: versión Phonegap del PMV.						  ok
 // y lo siguiente es: versión Phonegap que reproduzca de la tarjeta SD.			  ok
-// y lo siguiente es: que se pueda elegir entre internet y SD				elaborando
-// next, en la web código BIDI la descarga de la app, 					pte
-// next, instrucciones para descargar las canciones e instalarlas en el movil.		pte
-// next, mejorar el diseño CSS								pte
+// y lo siguiente es: que se pueda elegir entre internet y SD				  ok
+// next, en la web código BIDI la descarga de la app, 					  ok
+// next, instrucciones para descargar las canciones e instalarlas en el movil.		  ok
+// next, mejorar el diseño CSS								  pte
