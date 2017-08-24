@@ -40,5 +40,5 @@
 [38,6,"Perdón","21, 28f",,,,,,,,,,,],
 [39,6,,,,,,,,,,,,,],
 [40,6,"Favorita","2002 COMO TE PODRE PAGAR - 17-Padre y madre","2002 COMO TE PODRE PAGAR","17-Padre y madre",,,,,,"2008a DESDE TU FUENTE - 06-Mil caminos a la tierra prometida",,,],
-[41,0,"pausas","pausa inicio","Ponte cómodo, relaja tu cuerpo y tu mente.","En pocos segundos comienza el siguiente canto.", "https://dl.dropbox.com/s/uos7xo87x72ssm7/inicio_pausa.mp3","Medio-pausa","Una pausa para reflexionar.","¿Qué te ha llegado de el canto anterior?","https://dl.dropbox.com/s/1y7so1e323usj95/medio_pausa.mp3","final-pausa","agradecer, alabar, contemplar,...","Aprovecha estos segundos para ","https://dl.dropbox.com/s/vqz5udaqaqii5kf/final_pausa.mp3"]
+[41,0,"pausas","pausa inicio","Ponte cómodo, relaja tu cuerpo y tu mente.","En pocos segundos comienza el siguiente canto.", "https://dl.dropbox.com/s/uos7xo87x72ssm7/inicio_pausa.mp3","Medio-pausa","Una pausa para reflexionar.","¿Qué te ha llegado del canto anterior?","https://dl.dropbox.com/s/1y7so1e323usj95/medio_pausa.mp3","final-pausa","agradecer, alabar, contemplar,...","Aprovecha estos segundos para ","https://dl.dropbox.com/s/vqz5udaqaqii5kf/final_pausa.mp3"]
 ]
