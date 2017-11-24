@@ -1,4 +1,7 @@
-##Previsiones de cambios y mejoras  
+23/11/2017: nueva versión con CSS.  
+
+
+## Previsiones de cambios y mejoras  
 
 Nueva presentación basada en CSS.  
 ---
