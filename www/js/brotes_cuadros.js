@@ -1,5 +1,3 @@
-
-
 window.onload = function() {
 
 var control_boton = 0;
@@ -12,23 +10,24 @@ var elegido = "internet";
 elegirNet = function() {
 elegido = "internet";
 document.getElementById("boton_net_source").className = "botones";
-document.getElementById("boton_sd_source").className = "noSeleccionado";
+document.getElementById("boton_sd_source").className = "botonInicial";
 };
 
 // función para el botón "SD" (elegir origen de mp3)
 elegirSD = function() {
 elegido = "SD";
-document.getElementById("boton_net_source").className = "noSeleccionado";
+document.getElementById("boton_net_source").className = "botonInicial";
 document.getElementById("boton_sd_source").className = "botones";
 };
 
 // función para el botón "comenzar": elimina los botones, y carga la música
 comenzar = function() { 
-document.getElementById("botonera").innerHTML = "<br>";
-if (control_boton === 0) { // es la primera vez que pulsa el botón
-	control_boton = 1; // 
-	cargar();
-}
+	document.getElementById("botonera").className = 'dosMovil';
+	document.getElementById("botonera").innerHTML = "<br>";
+	if (control_boton === 0) { // es la primera vez que pulsa el botón
+		control_boton = 1; 
+		cargar();
+	}
 };
 // el elemento 'sonido' es cargado en la variable 'reproductorMusica', y qué pasa en las pausas (pausa o final)
 
@@ -56,7 +55,7 @@ cargar = function() {
 	// detiene el sonido si lo hay
     document.getElementById("sonido").pause();
 	// carga la canción que debe comenzar, desde la variable fichero
-    reproductorMusica.src = links[click_numero];  
+    reproductorMusica.src = links[click_numero]; 
 
 	// aumenta el contador para la siguiente canción
 	click_numero +=1;
