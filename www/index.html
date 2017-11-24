@@ -2,7 +2,10 @@
 <html> 
 <head>
 <meta charset="utf-8"/> 
+ <!-- Set the viewport using a <meta> tag -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="css/estilo_cuadros.css" />
+<link rel="stylesheet" type="text/css" href="css/responsive_cuadros.css" />
 <!--script type="text/javascript" src="cordova.js"></script-->
 <script type="text/javascript" src="js/enlaces.js" ></script>
 <script type="text/javascript" src="js/brotes_cuadros.js" ></script>
@@ -20,14 +23,13 @@
 	<button class="botonInicial" id="boton_sd_source" onclick="elegirSD()">mp3 en SD</button>
 	<button class="botones" id="boton_comenzar"       onclick="comenzar()">comenzar</button>
 </div>
-	<div class="tres">
-	<p class="aviso" id="avisos">--</p>
+<div class="tres">
+	<p class="aviso" id="avisos">Pulsa "comenzar"</p>
 			<audio id="sonido" class="player" controls preload="" autoplay>
 			<source src="file:///storage/sdcard1/music/BrotesDeOlivo/ambiente.mp3" type="audio/mpeg">
 			<source src="res/ambiente.mp3" type="audio/mpeg">
 			<source src="https://dl.dropbox.com/s/ypqmvs7fdzqqsc0/ambiente.mp3" type="audio/mpeg">
 		</audio>
-	</div>
 </div>
 <div class="cuatro">
 	<p class="tema"  id="tema">título</p>
