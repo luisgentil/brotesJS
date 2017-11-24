@@ -12,7 +12,7 @@ body {
 }
 
 div {
-    border: 2px solid #f1e9e3;/*   en desarrollo */
+    border: 2px solid #f1e9e3; /* en desarrollo */
     display: block;
     float: left;
     padding: 10px;
@@ -60,7 +60,8 @@ div:hover {
 }
 
 .uno span {
-    color: purple;
+    font-weight: bold;
+    color: #f1b963;
 }
 
 .dos{
@@ -69,9 +70,12 @@ div:hover {
 
 .dos p {
     line-height: 15%;
-;
-
 }
+
+.dosMovil {
+    background-color: #f8f398;
+}
+
 .botones {
     display: block;
     margin: 5px auto;
@@ -88,16 +92,16 @@ div:hover {
     box-shadow: none; /*0px 5px #616161;*/
 }
 
-.botones:hover {
-    background-color: #f8f398;
-    color: #e46161;
-}
-
 .botones:active {
-    color: #e46161;
+    color: #f1b963;
     position: relative;
     top: 7px;
     box-shadow: none;
+}
+
+.botones:hover {
+    background-color: #f8f398;
+    color: #e46161;
 }
 
 .botonInicial {
@@ -114,6 +118,7 @@ div:hover {
     cursor: pointer;
     border-radius: 2px;
     box-shadow: none;
+    float: left;
 }
 
 .botonInicial:hover {
@@ -122,7 +127,7 @@ div:hover {
 }
 
 .botonInicial:active {
-    color: #e46161;
+    color: #f1b963;
     position: relative;
     top: 7px;
     box-shadow: none;
