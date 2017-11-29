@@ -1,6 +1,6 @@
 
 /* Add a breakpoint at max-width: 670px */
-@media (max-width: 340px) {
+@media (max-width: 550px) {
 body {
     font-size: 0.8em;
 }
