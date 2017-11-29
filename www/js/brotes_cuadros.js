@@ -11,6 +11,7 @@ elegirNet = function() {
 elegido = "internet";
 document.getElementById("boton_net_source").className = "botones";
 document.getElementById("boton_sd_source").className = "botonInicial";
+document.getElementById("comentario").innerText ="internet";
 };
 
 // función para el botón "SD" (elegir origen de mp3)
@@ -18,6 +19,8 @@ elegirSD = function() {
 elegido = "SD";
 document.getElementById("boton_net_source").className = "botonInicial";
 document.getElementById("boton_sd_source").className = "botones";
+document.getElementById("comentario").innerText ="SD";
+
 };
 
 // función para el botón "comenzar": elimina los botones, y carga la música
@@ -26,13 +29,18 @@ comenzar = function() {
 	document.getElementById("botonera").innerHTML = "<br>";
 	if (control_boton === 0) { // es la primera vez que pulsa el botón
 		control_boton = 1; 
-		cargar();
+		var elegido = document.getElementById("comentario").innerText;
+		cargar(elegido);
 	}
 };
 // el elemento 'sonido' es cargado en la variable 'reproductorMusica', y qué pasa en las pausas (pausa o final)
 
 // función que cambia la música
-cargar = function() {
+cargar = function(elegido) {
+	if (elegido == "") { elegido = "internet";}
+
+	document.getElementById("comentario").innerText += elegido;
+
 	//averigua el día del mes, para seleccionar la fila
 	var day  	= fecha.getDate(); // buscar formula matematica
 	var fila	= enlaces[day]; // el array contiene toda la información de ese día
@@ -55,7 +63,10 @@ cargar = function() {
 	// detiene el sonido si lo hay
     document.getElementById("sonido").pause();
 	// carga la canción que debe comenzar, desde la variable fichero
-    reproductorMusica.src = links[click_numero]; 
+	if (elegido == "internet") {
+    	reproductorMusica.src = links[click_numero]; }
+    else {
+    	reproductorMusica.src = fichero; }
 
 	// aumenta el contador para la siguiente canción
 	click_numero +=1;
@@ -63,7 +74,7 @@ cargar = function() {
 	document.getElementById("sonido").play();
 };
 
-var reproductorMusica = document.getElementById("sonido"); 
+	var reproductorMusica = document.getElementById("sonido"); 
 	// qué pasa si la música se pausa:
 	reproductorMusica.onpause = function() {
 		//si la pausa es natural, porque llegó al final de la canción
@@ -72,27 +83,27 @@ var reproductorMusica = document.getElementById("sonido");
 			switch(momento) {
 
 				case "inicio":
-				cargar();
+				cargar(elegido);
 				break;
 
 				case "primera canción":
-				cargar();
+				cargar(elegido);
 				break;
 
 				case "primera pausa":
-				cargar();
+				cargar(elegido);
 				break;
 
 				case "segunda canción":
-				cargar();
+				cargar(elegido);
 				break;
 
 				case "segunda pausa":
-				cargar();
+				cargar(elegido);
 				break;
 
 				case "tercera canción":
-				cargar();
+				cargar(elegido);
 				break;
 
 				case "Terminado.":
