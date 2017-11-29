@@ -39,8 +39,6 @@ comenzar = function() {
 cargar = function(elegido) {
 	if (elegido == "") { elegido = "internet";}
 
-	document.getElementById("comentario").innerText += elegido;
-
 	//averigua el día del mes, para seleccionar la fila
 	var day  	= fecha.getDate(); // buscar formula matematica
 	var fila	= enlaces[day]; // el array contiene toda la información de ese día
