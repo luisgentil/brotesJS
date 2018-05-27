@@ -44,7 +44,7 @@ cargar = function(elegido) {
 	var fila	= enlaces[day]; // el array contiene toda la información de ese día
 
 	// las variables almacenan los datos útiles
-	var discos = [enlaces[day][4], enlaces[41][4], enlaces[day][8],  enlaces[41][8],  enlaces[day][12], enlaces[41][12], "Hasta mañana."];
+	var discos = [enlaces[day][4], enlaces[41][2], enlaces[day][8],  enlaces[41][2], enlaces[day][12],  enlaces[41][2],  "Hasta mañana."];
 	var temas  = [enlaces[day][5], enlaces[41][5], enlaces[day][9],  enlaces[41][9],  enlaces[day][13], enlaces[41][13], "Hasta mañana."];
 	var links  = [enlaces[day][6], enlaces[41][6], enlaces[day][10], enlaces[41][10], enlaces[day][14], enlaces[41][14], "Hasta Mañana."];
 
