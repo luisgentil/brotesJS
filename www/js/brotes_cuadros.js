@@ -56,7 +56,7 @@ cargar = function(elegido) {
 	// ahora, comienza a sonar la música de la canción
 	// genera un link al almacenamiento tarjeta SD
 	var songLink = links[click_numero].split("\/");
-	var fichero = "file:///storage/sdcard1/music/BrotesDeOlivo/" + songLink[songLink.length-1] ; 
+	var fichero = "file:///storage/sdcard1/music/BrotesDeOlivo/" + discos[click_numero] + "/" + songLink[songLink.length-1] ; 
 
 	// detiene el sonido si lo hay
     document.getElementById("sonido").pause();
