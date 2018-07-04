@@ -69,7 +69,7 @@ cargar = function(elegido) {
 	// aumenta el contador para la siguiente canción
 	click_numero +=1;
 // que suene!
-	document.getElementById("comentario").innerText = fichero; // control en desarrollo
+	document.getElementById("errores").innerText = fichero; // control en desarrollo
 	document.getElementById("sonido").play();
 };
 
