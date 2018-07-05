@@ -16,7 +16,7 @@ Conecta los altavoces o los auriculares :)
 Descarga desde el **repositorio en Phonegap, https://build.phonegap.com/apps/2690877/share**:
 - Escanenado el **código BIDI**
 - **Android**: descarga el archivo apk, guárdalo en el teléfono y ábrelo. (provisional) Debes tener activada la opción de "instalar aplicaciones desde orígenes desconocidos". Descarga la app (archivo .apk) en tu teléfono android. Al hacer click debe ofrecerte la opción de instalar, acepta. Si no te permite instalar, activa la opción Ajustes > Seguridad > Orígenes desconocidos.
-- Windows Phone: descarga el archivo appx, e instala la app.  
+- ~~Windows Phone: descarga el archivo appx, e instala la app.~~  
 
 Para escuchar la música debes disponer de **conexión a internet**, o bien diponer de las canciones en la **tarjeta SD** de tu teléfono.  
 Si deseas reproducir la música desde tu propio teléfono, debes descargarla y situarlo en la carpeta: storage/sdcard1/music/BrotesDeOlivo. No es difícil, sigue estas indicaciones.  
