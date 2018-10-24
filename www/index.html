@@ -1,50 +1,138 @@
 <!doctype html> 
 <html> 
 <head>
-<meta charset="utf-8"/> 
- <!-- Set the viewport using a <meta> tag -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="css/estilo_cuadros.css" />
-<link rel="stylesheet" type="text/css" href="css/responsive_cuadros.css" />
-<!--script type="text/javascript" src="cordova.js"></script-->
-<script type="text/javascript" src="js/enlaces.js" ></script>
-<script type="text/javascript" src="js/brotes_cuadros.js" ></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Brotes de Olivo music prayer app">
+	<meta name="keywords" content="Brotes de Olivo,Brotes,oración,música">
+	<meta name="version" content="3.0">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	 <!-- Set the viewport using a <meta> tag -->
+	<link rel="stylesheet" type="text/css" href="css/estilo_cuadros_bootstrap.css" />
+	<!--link rel="stylesheet" type="text/css" href="css/responsive_cuadros.css" /-->
+	<!--script type="text/javascript" src="cordova.js"></script-->
+	<!--script type="text/javascript" src="js/SocialSharing.js"></script-->
+	<script type="text/javascript" src="js/enlaces.js" ></script>
+	<script type="text/javascript" src="js/brotes_cuadros_bootstrap.js" ></script>
 </head>
 
 <body>
-<div class="titulo">
-	<img class="titulo-logo" src="images/icon.png">
-	<h1>Orar con Brotes de Olivo</h1>
-</div>
-<div class="uno">Cada día, 3 canciones distintas para orar con la música de <span>Brotes de Olivo</span>, con pausas para reflexionar. ¡Que te aproveche!</div>
-<div class="dos" id="botonera">
-	<p>Escoge y pulsa "comenzar"</p>
-	<button class="botonInicial" id="boton_net_source" onclick="elegirNet()">Internet</button>
-	<button class="botonInicial" id="boton_sd_source" onclick="elegirSD()">mp3 en SD</button>
-	<button class="botones" id="boton_comenzar"       onclick="comenzar()">comenzar</button>
-</div>
-<div class="tres">
-	<p class="aviso" id="avisos">Pulsa "comenzar"</p>
-			<audio id="sonido" class="player" controls preload="" autoplay>
-			<source src="file:///storage/sdcard1/music/BrotesDeOlivo/ambiente.mp3" type="audio/mpeg">
-			<source src="res/ambiente.mp3" type="audio/mpeg">
-			<source src="https://dl.dropbox.com/s/ypqmvs7fdzqqsc0/ambiente.mp3" type="audio/mpeg">
-		</audio>
-</div>
-<div class="cuatro">
-	<p class="tema"  id="tema">título</p>
-	<p class="disco" id="disco">disco</p>
-</div>
-<div class="cinco">
-	<p class="comentario" id="comentario">internet</p>
-	<p class="comentario" id="errores">.</p>	
-</div>
-<div class="seis">Descarga la app Android
-	<a class="seis" href="https://build.phonegap.com/apps/2690877/share"> <img src="images/orar-brotes-bidi.png"></a>
-</div>
-<div class="footer">
-		<p class="footer-text"  id="dpLink" >Gracias a <a href="http://www.brotesdeolivo.es/">Brotes de Olivo</a> por compartir su música.</p>
-		<p  id="bidi" >
-		</p>
-</div>
+	<div class="container">
+	<div class="jumbotron">
+      <h1 class="display-4">Orar con Brotes de Olivo</h1>
+      <p class="lead">Cada día, 3 canciones distintas para orar con la música de <span>Brotes de Olivo</span>, con pausas para reflexionar. ¡Que te aproveche!</p>
+      <hr class="my-4">
+	  <button type="button" id="boton_comenzar"   class="btn btn-danger"    onclick="comenzar()" >Comenzar</button>
+    </div>
+
+	<div class="card-deck">
+  			<div class="card">
+    			<img class="card-img-top" src="" alt="">
+    			<div class="card-body">
+      				<h5 id="avisos" class="card-title">Bienvenido</h5>
+      				<audio id="sonido" class="player" controls preload="" autoplay>
+						<source src="file:///storage/sdcard1/music/BrotesDeOlivo/ambiente.mp3" type="audio/mpeg">
+						<source src="res/ambiente.mp3" type="audio/mpeg">
+						<source src="https://dl.dropbox.com/s/ypqmvs7fdzqqsc0/ambiente.mp3" type="audio/mpeg">
+					</audio>
+	      			<br>
+      				<div id = "botonera"> <!--class="btn-group" role="group" aria-label="Basic example"--> 
+	      				<button type="button" id="boton_net_source" class="btn btn-primary"   onclick="elegirNet()">Internet</button>
+	      				<button type="button" id="boton_sd_source"  class="btn btn-secundary" onclick="elegirSD()" >mp3 en SD</button>
+	      			</div>
+	      			<p id="mensajes" class="card-text"></p>
+    			</div>
+    		</div>
+  			<div class="card">
+    			<img class="card-img-top" src="" alt="">
+    			<div class="card-body">
+      				<h5 class="card-title">Hoy:</h5>
+      				<p class="card-text">Canto 1: <span id="tema_1"></span>, del disco "<span id="disco_1"></span>"</p>
+      				<p class="card-text">Canto 2: <span id="tema_2"></span>, del disco "<span id="disco_2"></span>"</p>
+      				<p class="card-text">Canto 3: <span id="tema_3"></span>, del disco "<span id="disco_3"></span>"</p>
+    			</div>
+    		</div>
+  			<div class="card">
+    			<img class="card-img-top" src="" alt="">
+    	 		<div class="card-body seis">
+      				<h5 class="card-title">Descarga la app Android</h5>
+      				<a class="" href="https://build.phonegap.com/apps/2690877/share"> <img src="images/orar-brotes-bidi.png"></a>
+      				<!--button onclick="window.plugins.socialsharing.share('Message and link', null, null, 'http://www.x-services.nl')">message and link</button-->
+      				<!--https://www.npmjs.com/package/com.peerio.cordova.plugin.social-->
+      				<p class="card-text"></p>
+    			</div>
+    	 	</div>   
+    	</div>
+    <hr class="my-4">
+      <small>Gracias a <a href="http://www.brotesdeolivo.es/">Brotes de Olivo</a> por compartir su música.</small>
+    </div>
 </body>
+</html>      
+
+  <!--/div>
+  <div class="card"><a href="https://pilgrim.neocities.org/comidas/www/index.html">
+    <img class="card-img-top" src="images/comidas.png" alt="Card image cap"></a>
+     <div class="card-body">
+      <h5 class="card-title">Comidas felices  <span class="badge badge-info">Beta online</span></h5>
+      <p class="card-text">Una app Android que te facilita la elección de comidas y cenas, creando un planning semanal.</p>
+    </div>
+   <div class="card-footer">
+      <small class="text-muted"><span class="badge badge-primary" style="background-color: #e34c26; color: black">HTML</span> <span class="badge badge-primary" style="background-color: #563d7c">CSS</span> <span class="badge badge-primary" style="background-color: #f1e05a; color: black">Javascript</span> <span class="badge badge-light">2018</span></small>
+    </div>
+  </div>
+  <div class="card"><a href="">
+    <img class="card-img-top" src="images/kite.png" alt="Card image cap"></a>
+     <div class="card-body">
+       <h5 class="card-title">Control KAP</h5>
+       <p class="card-text">Controla un dispositivo KAP (Kite Aerial Photograpy) construido con Arduino.</p>
+     </div>
+    <div class="card-footer">
+      <small class="text-muted"><span class="badge badge-success">MIT AppInventor2</span> <span class="badge badge-primary" style="background-color: #01969d">Arduino</span> <span class="badge badge-light">2018</span></small>
+    </div>
+  </div>
+  </div>
+<br>
+	</div>
+
+
+	<div class="titulo">
+		<img class="titulo-logo" src="images/icon.png">
+		<h1></h1>
+	</div>
+	<div class="uno">Cada día, 3 canciones distintas para orar con la música de <span>Brotes de Olivo</span>, con pausas para reflexionar. ¡Que te aproveche!</div>
+	<div class="dos" id="botonera">
+		<p>Escoge y pulsa "comenzar"</p>
+		<button class="botonInicial" id="boton_net_source" onclick="elegirNet()">Internet</button>
+		<button class="botonInicial" id="boton_sd_source" onclick="elegirSD()">mp3 en SD</button>
+		<button class="botones" id="boton_comenzar"       onclick="comenzar()">comenzar</button>
+	</div>
+	<div class="tres">
+		<p class="aviso" id="avisos">Pulsa "comenzar"</p>
+				<audio id="sonido" class="player" controls preload="" autoplay>
+				<source src="file:///storage/sdcard1/music/BrotesDeOlivo/ambiente.mp3" type="audio/mpeg">
+				<source src="res/ambiente.mp3" type="audio/mpeg">
+				<source src="https://dl.dropbox.com/s/ypqmvs7fdzqqsc0/ambiente.mp3" type="audio/mpeg">
+			</audio>
+	</div>
+	<div class="cuatro">
+		<p class="tema"  id="tema">título</p>
+		<p class="disco" id="disco">disco</p>
+	</div>
+	<div class="cinco">
+		<p class="comentario" id="comentario">internet</p>
+		<p class="comentario" id="errores">.</p> 
+	</div>
+	<div class="seis">Descarga la app Android
+		<a class="seis" href="https://build.phonegap.com/apps/2690877/share"> <img src="images/orar-brotes-bidi.png"></a>
+	</div>
+	<div class="footer">
+			<p class="footer-text"  id="dpLink" >Gracias a <a href="http://www.brotesdeolivo.es/">Brotes de Olivo</a> por compartir su música.</p>
+			<p  id="bidi" >
+			</p>
+	</div-->
