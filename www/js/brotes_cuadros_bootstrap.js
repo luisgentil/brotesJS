@@ -31,18 +31,18 @@ var elegido 	  = "internet";
 
 // función para el botón "internet" (elegir origen de mp3)
 elegirNet = function() {
-elegido = "internet";
-document.getElementById("boton_net_source").classList.toggle("btn-success");
-document.getElementById("boton_sd_source").classList.toggle("invisible");
-localStorage.elegido ="internet";
+	elegido = "internet";
+	document.getElementById("boton_net_source").classList.toggle("btn-success");
+	document.getElementById("boton_sd_source").classList.toggle("invisible");
+	localStorage.elegido ="internet";
 };
 
 // función para el botón "SD" (elegir origen de mp3)
 elegirSD = function() {
 elegido = "SD";
-document.getElementById("boton_net_source").classList.toggle("invisible");
-document.getElementById("boton_sd_source").classList.toggle("btn-success");
-localStorage.elegido ="SD";
+	document.getElementById("boton_net_source").classList.toggle("invisible");
+	document.getElementById("boton_sd_source").classList.toggle("btn-success");
+	localStorage.elegido ="SD";
 };
 
 // función para el botón "comenzar": elimina los botones, y carga la música
@@ -56,6 +56,9 @@ comenzar = function() {
 	}
 };
 // el elemento 'sonido' es cargado en la variable 'reproductorMusica', y qué pasa en las pausas (pausa o final)
+compartir = function() {
+	document.getElementById("botonera_compartir").classList.toggle("invisible");
+}
 
 // función que cambia la música
 cargar = function(elegido) {
