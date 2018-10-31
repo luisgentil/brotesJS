@@ -1,3 +1,4 @@
+//version: 3.2
 window.onload = function() {
 
 var control_boton = 0;
@@ -77,17 +78,19 @@ cargar = function(elegido) {
     document.getElementById("sonido").pause();
 	// carga la canción que debe comenzar, desde la variable fichero
 	if (elegido == "internet") {
-    	reproductorMusica.src = links[click_numero]; }
+    	reproductorMusica.src = links[click_numero]; 
+    	//document.getElementById("errores").innerText = links[click_numero]; // control en desarrollo
+    	}
     else {
-    	reproductorMusica.src = fichero; }
-
+    	reproductorMusica.src = fichero; 
+    	//document.getElementById("errores").innerText = fichero; // control en desarrollo
+    }
     // actualiza los mensajes
     document.getElementById("mensajes").classList.toggle("invisible");
-    document.getElementById("mensajes").innerHTML = temas[click_numero] + "<br> " + discos[click_numero];
+    document.getElementById("mensajes").innerHTML = temas[click_numero];
 	// aumenta el contador para la siguiente canción
 	click_numero += 1;
 // que suene!
-//	document.getElementById("errores").innerText = fichero; // control en desarrollo
 	document.getElementById("sonido").play();
 };
 
