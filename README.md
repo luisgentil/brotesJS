@@ -5,7 +5,7 @@ Actualmente existe una versión de escritorio, disponible online en la web **htt
 La versión Android reproduce las canciones desde internet, aunque también pueden ser descargadas a la tarjeta SD del teléfono, evitando el consumo de datos.
 Esta versión está elaborada con el software Phonegap, disponible en www.phonegap.com.
 
-La selección de música puede descargarse desde Dropbox en la dirección https://www.dropbox.com/s/qnawh58htrkh5pe/BrotesDeOlivo_JS_181031.zip?dl=1.
+La selección de música puede descargarse desde Dropbox en la dirección https://www.dropbox.com/s/kw7smrdys9yu4rd/BrotesDeOlivo_JS_181031.zip?dl=1.
 
 # Versión online
 Dispones de una versión de escritorio, online, completamente funcional.  
@@ -20,7 +20,7 @@ Descarga desde el **repositorio en Phonegap, https://build.phonegap.com/apps/269
 
 Para escuchar la música debes disponer de **conexión a internet**, o bien diponer de las canciones en la **tarjeta SD** de tu teléfono.  
 Si deseas reproducir la música desde tu propio teléfono, debes descargarla y situarlo en la carpeta: storage/sdcard1/music/BrotesDeOlivo. No es difícil, sigue estas indicaciones.  
-Descarga el archivo *BrotesDeOlivo_JS_181031.zip* a tu teléfono desde Dropbox (https://www.dropbox.com/s/qnawh58htrkh5pe/BrotesDeOlivo_JS_181031.zip?dl=1).  
+Descarga el archivo *BrotesDeOlivo_JS_181031.zip* a tu teléfono desde Dropbox (https://www.dropbox.com/s/kw7smrdys9yu4rd/BrotesDeOlivo_JS_181031.zip?dl=1).  
 Es un fichero comprimido (zip), debes localizarlo, descomprimirlo y moverlo a la ubicación definitiva.  
 Para disponer las canciones en  directorio correcto necesitarás una aplicación que pueda acceder a las carpetas, descomprimir archivos y moverlos. Yo he usado ES File Explorer, es fácil de usar y muy eficaz. Disponible gratis en Google Play.  
 
