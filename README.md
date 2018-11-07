@@ -5,7 +5,7 @@ Actualmente existe una versión de escritorio, disponible online en la web **htt
 La versión Android reproduce las canciones desde internet, aunque también pueden ser descargadas a la tarjeta SD del teléfono, evitando el consumo de datos.
 Esta versión está elaborada con el software Phonegap, disponible en www.phonegap.com.
 
-La selección de música puede descargarse desde Dropbox en la dirección https://www.dropbox.com/s/7zp2wsk01abdy9t/BrotesDeOlivo_JS_180705.zip?dl=1.
+La selección de música puede descargarse desde Dropbox en la dirección https://www.dropbox.com/s/qnawh58htrkh5pe/BrotesDeOlivo_JS_181031.zip?dl=1.
 
 # Versión online
 Dispones de una versión de escritorio, online, completamente funcional.  
