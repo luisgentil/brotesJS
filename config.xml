@@ -11,8 +11,6 @@
     <author email="cursofactor@gmail.com" href="http://pilgrim.neocities.org">
         Luis Gentil
     </author>
-    
-    <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
     <plugin name="cordova-plugin-file" source="npm" spec="~4.1.1" />
     <platform name="android">    
       <icon src="icon.png" />
@@ -25,5 +23,4 @@
     <content src="index.html" />
     <access origin="*" />
     <plugin name="cordova-plugin-whitelist" version="1"/>
-    <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
 </widget>
