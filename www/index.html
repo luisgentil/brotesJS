@@ -1,11 +1,11 @@
 <!doctype html> 
 <html> 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="Una app para orar con la música de Brotes de Olivo. Cada día, 3 canciones distintas con pausas para reflexionar.">
-	<meta name="keywords" content="Brotes de Olivo,Brotes,oración,música">
-	<meta name="version" content="3.2">
+  <meta charset="utf-8">
+	<meta name="version" content="3.2.5">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Una app para orar con la música de Brotes de Olivo. Cada día, 3 canciones distintas con pausas para reflexionar.">
+  <meta name="keywords" content="Brotes de Olivo,Brotes,oración,música">
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -15,7 +15,7 @@
 
 	 <!-- Set the viewport using a <meta> tag -->
 	<link rel="stylesheet" type="text/css" href="css/estilo_cuadros_bootstrap.css" />
-	<!--link rel="stylesheet" type="text/css" href="css/responsive_cuadros.css" /-->
+	<link rel="stylesheet" type="text/css" href="css/responsive_cuadros.css" />
 	<!--script type="text/javascript" src="cordova.js"></script-->
 	<!--script type="text/javascript" src="js/SocialSharing.js"></script-->
 	<script type="text/javascript" src="js/enlaces.js" ></script>
@@ -25,16 +25,45 @@
 <body>
 	<div class="container">
 	<div class="jumbotron">
-      <h1 class="display-4">Orar con Brotes de Olivo</h1>
-      <p class="lead">Cada día, 3 canciones distintas para orar con la música de <span>Brotes de Olivo</span>, con pausas para reflexionar. ¡Que te aproveche!</p>
-      <hr class="my-4">
+		<h3 class="display-4"><img src="images/icon.png">Orar con Brotes de Olivo</h3>
+    
+		<p class="lead">Cada día, 3 canciones distintas para orar con la música de <span class="text-muted">Brotes de Olivo</span>, con pausas para reflexionar. ¡Que te aproveche!</p>
+		<!--hr class="my-4"-->
+	  <div id="control_sonido" class="control_class">
+    <audio id="sonido" class="player" controls preload="" autoplay>
+      <source src="file:///storage/sdcard1/music/BrotesDeOlivo/ambiente.mp3" type="audio/mpeg">
+      <source src="res/ambiente.mp3" type="audio/mpeg">
+      <source src="https://dl.dropbox.com/s/ypqmvs7fdzqqsc0/ambiente.mp3" type="audio/mpeg">
+		</audio>
 	  <button type="button" id="boton_comenzar"   class="btn btn-danger"    onclick="comenzar()" >Comenzar</button>
-	  <button type="button" id="boton_compartir"  class="btn btn-info"      onclick="compartir()">Compartir</button>
+    <div id = "botonera" class="botonera"> <!--class="btn-group" role="group" aria-label="Basic example"--> 
+      <button type="button" id="boton_net_source" class="btn btn-primary"   onclick="elegirNet()">Internet</button>
+      <button type="button" id="boton_sd_source"  class="btn btn-secundary" onclick="elegirSD()" >mp3 en SD</button>
+    </div>
+    </div>
+	</div>
 
+	<div class="card-deck">
+    <div class="card">
+          <img class="card-img-top" src="" alt="">
+          <div class="card-body">
+              <h5 class="card-title">Hoy:</h5>
+              <p class="card-text">Canto 1: <span id="tema_1"></span>, del disco "<span id="disco_1"></span>"</p>
+              <p class="card-text">Canto 2: <span id="tema_2"></span>, del disco "<span id="disco_2"></span>"</p>
+              <p class="card-text">Canto 3: <span id="tema_3"></span>, del disco "<span id="disco_3"></span>"</p>
+          </div>
+        </div>
+
+    <hr class="my-4">
+
+	<div id="bien_Y_bot_compartir" class="card">
+		<img class="card-img-top" src="" alt="">
+		<div class="card-body">
+			<h5 id="avisos" class="card-title">Bienvenido</h5>
+			<button type="button" id="boton_compartir"  class="btn btn-info"      onclick="compartir()">Compartir</button>
 	  <!-- Sharing buttons  -->
-
-	  <div id="botonera_compartir" class="sharing_buttons invisible">
-	  	<!-- Sharingbutton Facebook -->
+    <div id="botonera_compartir" class="sharing_buttons invisible">
+      <!-- Sharingbutton Facebook -->
 <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpilgrim.neocities.org%2Fbrotes%2Findex.html" target="_blank" aria-label="">
   <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
@@ -81,49 +110,23 @@
     </div>
   </div>
 </a>
-
-
-	  </div>
     </div>
+		<br>
+		<p id="mensajes" class="card-text"></p>
+    </div>
+  </div>
 
-	<div class="card-deck">
-  			<div class="card">
-    			<img class="card-img-top" src="" alt="">
-    			<div class="card-body">
-      				<h5 id="avisos" class="card-title">Bienvenido</h5>
-      				<audio id="sonido" class="player" controls preload="" autoplay>
-						<source src="file:///storage/sdcard1/music/BrotesDeOlivo/ambiente.mp3" type="audio/mpeg">
-						<source src="res/ambiente.mp3" type="audio/mpeg">
-						<source src="https://dl.dropbox.com/s/ypqmvs7fdzqqsc0/ambiente.mp3" type="audio/mpeg">
-					</audio>
-	      			<br>
-      				<div id = "botonera"> <!--class="btn-group" role="group" aria-label="Basic example"--> 
-	      				<button type="button" id="boton_net_source" class="btn btn-primary"   onclick="elegirNet()">Internet</button>
-	      				<button type="button" id="boton_sd_source"  class="btn btn-secundary" onclick="elegirSD()" >mp3 en SD</button>
-	      			</div>
-	      			<p id="mensajes" class="card-text"></p>
-    			</div>
-    		</div>
-  			<div class="card">
-    			<img class="card-img-top" src="" alt="">
-    			<div class="card-body">
-      				<h5 class="card-title">Hoy:</h5>
-      				<p class="card-text">Canto 1: <span id="tema_1"></span>, del disco "<span id="disco_1"></span>"</p>
-      				<p class="card-text">Canto 2: <span id="tema_2"></span>, del disco "<span id="disco_2"></span>"</p>
-      				<p class="card-text">Canto 3: <span id="tema_3"></span>, del disco "<span id="disco_3"></span>"</p>
-    			</div>
-    		</div>
-  			<div class="card">
-    			<img class="card-img-top" src="" alt="">
-    	 		<div class="card-body seis">
-      				<h5 class="card-title">Descarga la app Android</h5>
-      				<a class="" href="https://build.phonegap.com/apps/2690877/share"> <img src="images/orar-brotes-bidi.png"></a>
-      				<p id ="errores" class="card-text"></p>
-    			</div>
-    	 	</div>   
-    	</div>
-    <hr class="my-4">
+  <div class="card">
+    <img class="card-img-top" src="" alt="">
+    <div class="card-body seis">
+      <h5 class="card-title">Descarga la app Android</h5>
+      <a class="" href="https://build.phonegap.com/apps/2690877/share"> <img src="images/orar-brotes-bidi.png"></a>
+      <p id ="errores" class="card-text"></p>
+    </div>
+  </div>   
+</div>
       <small>Gracias a <a href="http://www.brotesdeolivo.es/">Brotes de Olivo</a> por compartir su música.</small>
+      <small style="font-size: 0.5rem;">version: 3.2.5</small>
     </div>
 </body>
 </html>      

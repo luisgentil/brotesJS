@@ -1,4 +1,4 @@
-//version: 3.2
+//version: 3.2.2
 window.onload = function() {
 
 var control_boton = 0;
@@ -79,11 +79,11 @@ cargar = function(elegido) {
 	// carga la canción que debe comenzar, desde la variable fichero
 	if (elegido == "internet") {
     	reproductorMusica.src = links[click_numero]; 
-    	//document.getElementById("errores").innerText = links[click_numero]; // control en desarrollo
+   // 	document.getElementById("errores").innerText = links[click_numero]; // fichero;// control en desarrollo
     	}
     else {
     	reproductorMusica.src = fichero; 
-    	//document.getElementById("errores").innerText = fichero; // control en desarrollo
+  //  	document.getElementById("errores").innerText = fichero; // control en desarrollo
     }
     // actualiza los mensajes
     document.getElementById("mensajes").classList.toggle("invisible");
