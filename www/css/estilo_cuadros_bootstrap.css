@@ -1,4 +1,4 @@
-/* version: 3.2.5 */;
+/* version: 3.2.6 */;
 
 
 .jumbotron {
@@ -8,8 +8,8 @@
 }
 
 .jumbotron img {
-    width: 72px;
-    height: 72px;
+    width: 96px;
+    height: 96px;
     float: left;
  /*   border: 2px solid purple; /* en desarrollo */
 }
