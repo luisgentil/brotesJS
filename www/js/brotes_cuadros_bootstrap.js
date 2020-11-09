@@ -5,7 +5,8 @@ var control_boton = 0;
 var click_numero  = 0;
 var fecha 		  = new Date();
 var estado 		  = ["primera canción", "primera pausa", "segunda canción", "segunda pausa", "tercera canción", "Final"];
-var elegido 	  = "internet";
+var elegido 	  	  = "internet";
+localStorage.elegido 	  = "internet";
 
 // función que añade los contenidos antes de empezar
 
